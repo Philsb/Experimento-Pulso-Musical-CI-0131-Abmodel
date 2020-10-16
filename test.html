@@ -1,0 +1,227 @@
+﻿<!DOCTYPE> <html>  
+<head>
+    <meta charset="ISO-8859-1">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Prueba de Memoria Rítmica</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+	<audio class="sound" src = "assets/audio/4C120.mp3"></audio>
+	<audio class="sound" src = "assets/audio/4C60.mp3"></audio>
+	<audio class="sound" src = "assets/audio/2C120.mp3"></audio>
+	<audio class="sound" src = "assets/audio/2C60.mp3"></audio>
+</head>
+<body>
+    <div id="main">
+        <section id="instrucciones" class="instrucciones">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1>Pruebas</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="progress" style="height: 25px;">
+                            <div class="progress-bar" role="progressbar" style="width: 0%; background-color: coral; color: black; font-size: 17px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" id="barra">0%</div>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="nav nav-tabs nav-justified" id="tabsPrueba" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link active disabled" id="p1-tab" data-toggle="tab" href="#prueba1" role="tab" aria-controls="prueba1" aria-selected="true">Prueba #1</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link disabled" id="p2-tab" data-toggle="tab" href="#prueba2" role="tab" aria-controls="prueba2" aria-selected="false">Prueba #2</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link disabled" id="p3-tab" data-toggle="tab" href="#prueba3" role="tab" aria-controls="prueba3" aria-selected="false">Prueba #3</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link disabled" id="p4-tab" data-toggle="tab" href="#prueba4" role="tab" aria-controls="prueba4" aria-selected="false">Prueba #4</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link disabled" id="final-tab" data-toggle="tab" href="#final" role="tab" aria-controls="final" aria-selected="false">Finalizar prueba</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="prueba1" role="tabpanel" aria-labelledby="p1-tab">
+                                <div class="jumbotron jumbotron-fluid" id="comenzar_p1">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-12 text-center">
+                                                <button class="icon play-prueba" id="botonlocochon1" style="width: 300px; height: 300px; border-radius: 50%;"><img class="play-img" src="assets/img/play.png"></button>
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <div class="row">
+                                            <div class="col-12 text-center">
+                                                <h1 style="vertical-align: central;">Comenzar Prueba #1</h1>
+                                                <br />
+                                                <h4 style="vertical-align: central;">La prueba comienza 3 segundos después de presionar este botón</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="prueba2" role="tabpanel" aria-labelledby="p2-tab">
+                                <div class="jumbotron jumbotron-fluid" id="comenzar_p1">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-12 text-center">
+                                                <button class="icon play-prueba" id="botonlocochon2" style="width: 300px; height: 300px; border-radius: 50%;"><img class="play-img" src="assets/img/play.png"></button>
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <div class="row">
+                                            <div class="col-12 text-center">
+                                                <h1 style="vertical-align: central;">Comenzar Prueba #2</h1>
+                                                <br />
+                                                <h4 style="vertical-align: central;">La prueba comienza 3 segundos después de presionar este botón</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="prueba3" role="tabpanel" aria-labelledby="p3-tab">
+                                <div class="jumbotron jumbotron-fluid" id="comenzar_p1">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-12 text-center">
+                                                <button class="icon play-prueba" id="botonlocochon3" style="width: 300px; height: 300px; border-radius: 50%;"><img class="play-img" src="assets/img/play.png"></button>
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <div class="row">
+                                            <div class="col-12 text-center">
+                                                <h1 style="vertical-align: central;">Comenzar Prueba #3</h1>
+                                                <br />
+                                                <h4 style="vertical-align: central;">La prueba comienza 3 segundos después de presionar este botón</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="prueba4" role="tabpanel" aria-labelledby="p4-tab">
+                                <div class="jumbotron jumbotron-fluid" id="comenzar_p1">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-12 text-center">
+                                                <button class="icon play-prueba" id="botonlocochon4" style="width: 300px; height: 300px; border-radius: 50%;"><img class="play-img" src="assets/img/play.png"></button>
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <div class="row">
+                                            <div class="col-12 text-center">
+                                                <h1 style="vertical-align: central;">Comenzar Prueba #4</h1>
+                                                <br />
+                                                <h4 style="vertical-align: central;">La prueba comienza 3 segundos después de presionar este botón</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="final" role="tabpanel" aria-labelledby="final-tab">
+                                <div class="jumbotron jumbotron-fluid" id="comenzar_p1">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-12 text-center">
+                                                <h2>Sus resultados: ?</h2>
+                                            </div>
+                                        </div>
+                                        <hr/>
+                                        <div class="row">
+                                            <div class="col-12 text-center">
+                                                <h3>De parte de nuestro equipo le agradecemos su tiempo e interés en realizar esta prueba.</h3>
+                                                <h3>Ya puede salir de la página</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab_spacebar" role="tabpanel" aria-labelledby="spacebar-tab">
+                                <div class="jumbotron">
+                                    <div class="container">
+                                        <div class="row desktop-spacebar">
+                                            <div class="col-12">
+                                                <img class="spacebar_img" src="assets/img/spacebar.png" id="spacebar">
+                                                <img class="spacebar_img" src="assets/img/spacebar_pressed.png" id="spacebar_pressed" style="display: none;">
+                                            </div>
+                                        </div>
+                                        <div class="row mobile-button">
+                                            <div class="col-12 text-center">
+                                                <button class="btn-get-started scrollto" id="btn-mobile"><img src="assets/img/nota.png" style="width: 100%; height: 350px;"></button>
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <div class="row">
+                                            <div class="col-12 text-center">
+                                                <h4 class="desktop-spacebar" style="vertical-align: central;">Presione la barra espaciadora de acuerdo al ritmo hasta que termine el tiempo</h4>
+                                                <h4 class="mobile-button" style="vertical-align: central;">Presione el botón de acuerdo al ritmo hasta que termine el tiempo</h4>
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="row">
+                                            <div class="col-12 text-center">
+                                                <h3 style="vertical-align: central;">Tiempo restante:</h3>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 text-center">
+                                                <h1 style="vertical-align: central;" id="timer_test">23 segundos</h1>
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <div class="row">
+
+                                            <div class="col-12 text-center">
+                                                <a href="#" class="btn-get-started scrollto" id="btn_continuar_p1" style="display:none;">Continuar con prueba #2</a>
+                                                <a href="#" class="btn-get-started scrollto" id="btn_continuar_p2" style="display:none;">Continuar con prueba #3</a>
+                                                <a href="#" class="btn-get-started scrollto" id="btn_continuar_p3" style="display:none;">Continuar con prueba #4</a>
+                                                <a href="#" class="btn-get-started scrollto" id="btn_continuar_fin" style="display:none;">Finalizar prueba</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </section>       
+    </div>   
+    <br>
+    <label id="PrintZone0"></label>
+    <br>
+    <label id="PrintZone1"></label>
+    <script src="assets/js/test.js"></script>
+</body>
+
+
+</html>
