@@ -42,7 +42,7 @@
         <section id="datos" class="datos">
             <div class="container">
 
-                <div class="section-title" data-aos="fade-up">                
+                <div class="section-title" data-aos="fade-up">
                     <p>Antes de comenzar...</p>
                 </div>
 
@@ -64,19 +64,9 @@
                             <p>Favor ingrese los siguientes datos</p>
                         </div>
 
-                        <br/>
+                        <br />
 
-                        <form method="post" role="form" action="instrucciones.html">
-                            <div class="form-row">
-                                <div class="col-md-6 form-group">
-                                    <p>Nombre</p>
-                                    <input type="text" name="name" class="form-control" id="nombre" required />
-                                </div>
-                                <div class="col-md-6 form-group">
-                                    <p>Apellidos</p>
-                                    <input type="text" class="form-control" name="apellidos" id="apellidos" required />
-                                </div>
-                            </div>
+                        <form method="post" role="form" action="assets/php/datos.php">
                             <div class="form-row">
                                 <div class="col-md-6 form-group">
                                     <p>Edad</p>
@@ -88,15 +78,34 @@
                                         <option value="" disabled selected>Seleccione una opción</option>
                                         <option value="M">Masculino</option>
                                         <option value="F">Femenino</option>
+                                        <option value="O">Otro</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="col-md-6 form-group">
                                     <p>Años de experiencia musical</p>
-                                    <input type="number" class="form-control" name="subject" id="experiencia" placeholder="0" required />
+                                    <input type="number" class="form-control" name="subject" id="experiencia" placeholder="0" min="0" required />
                                 </div>
                                 <div class="col-md-6 form-group">
+                                    <p>Género musical preferido</p>
+                                    <select class="form-control" name="genMusical" id="genMusical" placeholder="Escoja una opción" required>
+                                        <option value="" disabled selected>Seleccione una opción</option>
+                                        <option value="rock">Rock</option>
+                                        <option value="jazz">Jazz</option>
+                                        <option value="rb">Rhythm and Blues (R&B)</option>
+                                        <option value="electro">Electrónica</option>
+                                        <option value="country">Country</option>
+                                        <option value="pop">Pop</option>
+                                        <option value="hiphop">Hip-Hop</option>
+                                        <option value="clasica">Clásica</option>
+                                        <option value="reggae">Reggae</option>
+                                        <option value="reggaeton">Reggaetón</option>
+                                        <option value="bailable">Bailable (Salsa, Merengue, Bachata, entre otros...)</option>
+                                        <option value="metal">Metal</option>
+                                    </select>
+                                    <br/>
+                                    <p style="text-align: justify; font-size: 13px;">*Si no encuentra su género preferido específico favor seleccione el que más se asemeja</p>
                                 </div>
                             </div>
                             <div class="mb-3">
@@ -132,6 +141,7 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/datos.js"></script>
 
 
 

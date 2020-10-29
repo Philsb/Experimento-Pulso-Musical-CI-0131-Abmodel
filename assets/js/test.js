@@ -5,6 +5,7 @@ var counter = 0
 var countFlag = false;
 var keyUpFlag = true;
 var testTime = 15000;
+var currentTest = 0;
 let barra = document.getElementById('barra');
 let tab_p1 = document.getElementById('p1-tab');
 let tab_p2 = document.getElementById('p2-tab');
@@ -34,17 +35,21 @@ function recordEntry() {
         counter++;
         timestamps.push(Date.now() - timestart);
     }
-    if (countFlag && (Date.now() - timestart) > testTime) {
-        //En esta sección es para imprimir resultados, de acá se puede mandar a la base de datos
-        intervals = []
-        for (let index = 1; index < timestamps.length; index++) {
-            intervals.push(timestamps[index] - timestamps[index - 1])
-        }
-        document.getElementById("PrintZone0").innerHTML = timestamps;
-        document.getElementById("PrintZone1").innerHTML = intervals;
-        countFlag = false;
-    }
 }
+
+function finishTest() {
+    //En esta sección es para imprimir resultados, de acá se puede mandar a la base de datos
+    intervals = []
+    counter = 0;
+    currentTest++;
+    for (let index = 1; index < timestamps.length; index++) {
+        intervals.push(timestamps[index] - timestamps[index - 1])
+    }
+    document.getElementById("PrintZone0").innerHTML = timestamps;
+    document.getElementById("PrintZone1").innerHTML = intervals;
+    countFlag = false;
+}
+
 $(document).keydown(function (event) {
     if (keyUpFlag) {
         keyUpFlag = false;
@@ -102,16 +107,17 @@ function comenzar_prueba(sound) {
     sleep(3000);
 
     if (sound == 0) {
-        soundArr[0].play();
-    } else if (sound == 1) {
         soundArr[1].play();
+    } else if (sound == 1) {
+        soundArr[0].play();
     } else if (sound == 2) {
         soundArr[2].play();
     } else {
         soundArr[3].play();
     }
 
-    setTimeout(setFlags, 8000)
+    setTimeout(setFlags, 8000);
+    setTimeout(finishTest, 23000);
 
     start = new Date().getTime();
 
