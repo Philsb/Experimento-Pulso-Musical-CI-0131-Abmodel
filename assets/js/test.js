@@ -30,6 +30,15 @@ let container_spacebar = document.getElementById('cont_spacebar');
 let btn_mobile =  document.getElementById('btn-mobile');
 
 
+//Resultados de cada prueba
+var resultados = {
+    p0: {timestamps: [], intervals:[]},
+    p1: {timestamps: [], intervals:[]},
+    p2: {timestamps: [], intervals:[]},
+    p3: {timestamps: [], intervals:[]}
+};
+
+
 function recordEntry() {
     if (countFlag && (Date.now() - timestart) < testTime) {
         counter++;
@@ -38,7 +47,9 @@ function recordEntry() {
 }
 
 function finishTest() {
-    //En esta sección es para imprimir resultados, de acá se puede mandar a la base de datos
+    //En esta secciï¿½n es para imprimir resultados, de acï¿½ se puede mandar a la base de datos
+    
+
     intervals = []
     counter = 0;
     currentTest++;
@@ -48,6 +59,10 @@ function finishTest() {
     document.getElementById("PrintZone0").innerHTML = timestamps;
     document.getElementById("PrintZone1").innerHTML = intervals;
     countFlag = false;
+
+    //Guarda los resultados
+    //resultados['p'+ testNumber].timestamps = timestamps;
+    //resultados['p'+ testNumber].intervals = intervals;
 }
 
 $(document).keydown(function (event) {
@@ -201,6 +216,7 @@ function continuar_fin() {
     tab_final.className = 'nav-link active disabled';
     barra.style.width = '100%';
     barra.innerHTML = '100%';
+    send_data();
 }
 
 btn_continuar_p1.addEventListener('click', continuar_p1);
@@ -222,6 +238,23 @@ function mobile_released() {
         keyUpFlag = true;
     }
 }
+
+//funcion para enviar datos a la base de datos
+function send_data() {
+    $.ajax({
+        type: "POST",
+        url: "enviarDatos.php",
+        data: {
+
+        },
+        traditional: true,
+        success: function (data) {
+            alert(data);
+        },
+    });
+}
+
+
 
 btn_mobile.addEventListener('touchstart', mobile_pressed);
 btn_mobile.addEventListener('touchend', mobile_released);
