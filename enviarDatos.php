@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "adminPM";
 $password = "pulsomusical123!";
-$dbname = "Prueba";
+$dbname = "pulso_musical";
 
 
 session_start();
@@ -13,7 +13,7 @@ $data['genero_pref'] = $_SESSION['genero_pref'];
  
 echo json_encode($data);
 
-$edad =  $_SESSION['edad'] ;
+$edad =  $_SESSION['edad'];
 $sexo = $_SESSION['sexo'];
 $genero_pref = $_SESSION['genero_pref'];
 $experiencia =  $_SESSION['experiencia'];
