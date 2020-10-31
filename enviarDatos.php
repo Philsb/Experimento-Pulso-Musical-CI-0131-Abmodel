@@ -18,8 +18,12 @@ $sexo = $_SESSION['sexo'];
 $genero_pref = $_SESSION['genero_pref'];
 $experiencia =  $_SESSION['experiencia'];
 
+if(isset($_POST['resultados'])){
+ $obj = json_decode($_POST['resultados']);
+ //some php operation
+}
 
-
+echo $obj
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

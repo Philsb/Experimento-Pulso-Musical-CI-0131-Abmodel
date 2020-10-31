@@ -46,23 +46,20 @@ function recordEntry() {
     }
 }
 
-function finishTest() {
-    //En esta secci�n es para imprimir resultados, de ac� se puede mandar a la base de datos
-    
-
-    intervals = []
+function finishTest(testNumber) {
+    var intervals = []
     counter = 0;
     currentTest++;
     for (let index = 1; index < timestamps.length; index++) {
         intervals.push(timestamps[index] - timestamps[index - 1])
     }
-    document.getElementById("PrintZone0").innerHTML = timestamps;
-    document.getElementById("PrintZone1").innerHTML = intervals;
-    countFlag = false;
 
     //Guarda los resultados
-    //resultados['p'+ testNumber].timestamps = timestamps;
-    //resultados['p'+ testNumber].intervals = intervals;
+    resultados['p'+ testNumber].timestamps = timestamps;
+    resultados['p'+ testNumber].intervals = intervals;
+
+    countFlag = false;
+    timestamps = []
 }
 
 $(document).keydown(function (event) {
@@ -122,17 +119,21 @@ function comenzar_prueba(sound) {
     sleep(3000);
 
     if (sound == 0) {
+        setTimeout(finishTest, 23000, 0);
         soundArr[1].play();
     } else if (sound == 1) {
+        setTimeout(finishTest, 23000, 1);
         soundArr[0].play();
     } else if (sound == 2) {
+        setTimeout(finishTest, 23000, 2);
         soundArr[2].play();
     } else {
+        setTimeout(finishTest, 23000, 3);
         soundArr[3].play();
     }
 
     setTimeout(setFlags, 8000);
-    setTimeout(finishTest, 23000);
+    
 
     start = new Date().getTime();
 
@@ -241,12 +242,11 @@ function mobile_released() {
 
 //funcion para enviar datos a la base de datos
 function send_data() {
+    var postData =  JSON.stringify(resultados);
     $.ajax({
         type: "POST",
         url: "enviarDatos.php",
-        data: {
-
-        },
+        data: {resultados:postData},
         traditional: true,
         success: function (data) {
             alert(data);
