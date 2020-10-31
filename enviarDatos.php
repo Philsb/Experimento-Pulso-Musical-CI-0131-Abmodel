@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "adminPM";
-$password = "PulsoMusical123!(";
+$password = "pulsomusical123!";
 $dbname = "Prueba";
 
 
