@@ -42,7 +42,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO datosTest (edad, sexo, experiencia, genPreferido, intervP1, intervP2, intervP3, intervP4, timestmpsP1, timestmpsP2, timestmpsP3, timestmpsP4)
+$sql = "INSERT INTO Datos (edad, sexo, experiencia, genPreferido, intervP1, intervP2, intervP3, intervP4, timestmpsP1, timestmpsP2, timestmpsP3, timestmpsP4)
         VALUES ($edad ,'$sexo', $experiencia, '$genero_pref', '$intervP0', '$intervP1', '$intervP2', '$intervP3', '$timstpP0', '$timstpP1', '$timstpP2', '$timstpP3')";
 
 if ($conn->query($sql) === TRUE) {
