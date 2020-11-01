@@ -278,7 +278,7 @@ function precision(tiempo_perfecto, interv) {
     var acumulador = 0.0;
     var porcentaje = 0.0;
     for (var i = 0; i < interv.length; i++) {
-        acumulador += (tiempo_perfecto-(interv[i]%tiempo_perfecto));
+        acumulador += (interv[i]%tiempo_perfecto);
     }
     acumulador = (acumulador/interv.length);
     porcentaje = 100 - ((acumulador / tiempo_perfecto) * 100);
