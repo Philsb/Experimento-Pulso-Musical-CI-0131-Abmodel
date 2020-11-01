@@ -61,11 +61,11 @@
                     <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
                         <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
                             <div class="icon"><i class="bx bx-headphone"></i></div>
-                            <h4 class="title">Use aud�fonos para una mejor experiencia de sonido y evitar ruido de fondo.</h4>
+                            <h4 class="title">Use audífonos para una mejor experiencia de sonido y evitar ruido de fondo.</h4>
                         </div>
                         <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
                             <div class="icon"><i class="bx bx-volume-mute"></i></div>
-                            <h4 class="title">Aseg�rese que est� en un lugar callado con la menor cantidad de ruido de fondo.</h4>
+                            <h4 class="title">Asegúrese que esté en un lugar callado con la menor cantidad de ruido de fondo.</h4>
                         </div>
                         <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">
                             <div class="icon"><i class="bx bx-timer"></i></div>
@@ -83,10 +83,10 @@
                     </div>
                     <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
                         <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
-                            <p class="description desktop-spacebar">En esta prueba usted tiene que tratar de copiar un ritmo lo m�s exactamente posible a los audios que va a escuchar, <strong>presionando la barra espaciadora de su teclado</strong>, en los momentos donde el audio toca una nota.</p>
-                            <p class="description mobile-button">En esta prueba usted tiene que tratar de copiar un ritmo lo m�s exactamente posible a los audios que va a escuchar, <strong>presionando el bot�n en pantalla</strong>, en los momentos donde el audio toca una nota.</p>
-                            <p class="description desktop-spacebar">Los audios solo se reproducir�n una sola vez por 8 segundos. Durante este tiempo no se registran pulsaciones del usuario, utilice este tiempo para acostumbrarse al ritmo. Luego de que termine de escuchar el audio, continue presionando la barra espaciadora, intentando mantener el mismo ritmo, hasta que el tiempo en pantalla llegue a cero.</p>
-                            <p class="description mobile-button">Los audios solo se reproducir�n una sola vez por 8 segundos. Durante este tiempo no se registran pulsaciones del usuario, utilice este tiempo para acostumbrarse al ritmo. Luego de que termine de escuchar el audio, continue presionando el bot�n en pantalla, intentando mantener el mismo ritmo, hasta que el tiempo en pantalla llegue a cero.</p>
+                            <p class="description desktop-spacebar">En esta prueba usted tiene que tratar de copiar un ritmo lo más exactamente posible a los audios que va a escuchar, <strong>presionando la barra espaciadora de su teclado</strong>, en los momentos donde el audio toca una nota.</p>
+                            <p class="description mobile-button">En esta prueba usted tiene que tratar de copiar un ritmo lo más exactamente posible a los audios que va a escuchar, <strong>presionando el botón en pantalla</strong>, en los momentos donde el audio toca una nota.</p>
+                            <p class="description desktop-spacebar">Los audios solo se reproducirán una sola vez por 8 segundos. Durante este tiempo no se registran pulsaciones del usuario, utilice este tiempo para acostumbrarse al ritmo. Luego de que termine de escuchar el audio, continue presionando la barra espaciadora, intentando mantener el mismo ritmo, hasta que el tiempo en pantalla llegue a cero.</p>
+                            <p class="description mobile-button">Los audios solo se reproducirán una sola vez por 8 segundos. Durante este tiempo no se registran pulsaciones del usuario, utilice este tiempo para acostumbrarse al ritmo. Luego de que termine de escuchar el audio, continue presionando el bot�n en pantalla, intentando mantener el mismo ritmo, hasta que el tiempo en pantalla llegue a cero.</p>
                         </div>
                     </div>
                     <div class="col-lg-2">
@@ -116,7 +116,7 @@
                     <div class="col-lg-8">
                         <div class="icon-box">
                             <div class="icon play-prueba" id="play-prueba"><i class="bx bx-play-circle"></i></div>
-                            <h4 class="title" style="text-align: justify">A modo de ejemplo, presione el icono de la izquierda e intente copiar el ritmo a como se explic� antes.</h4>
+                            <h4 class="title" style="text-align: justify">A modo de ejemplo, presione el icono de la izquierda e intente copiar el ritmo a como se explicó antes.</h4>
                         </div>
                     </div>
                     <div class="col-lg-2">

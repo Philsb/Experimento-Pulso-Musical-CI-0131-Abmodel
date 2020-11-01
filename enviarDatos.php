@@ -23,7 +23,7 @@ if(isset($_POST['resultados'])){
  //some php operation
 }
 
-echo $obj
+echo json_encode($obj);
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
