@@ -23,6 +23,7 @@ if(isset($_POST['resultados'])){
  //some php operation
 }
 
+$disp = $obj->disp;
 $intervP0 = $obj->p0->intervals;
 $intervP1 = $obj->p1->intervals;
 $intervP2 = $obj->p2->intervals;
@@ -42,8 +43,8 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO Datos (edad, sexo, experiencia, genPreferido, intervP1, intervP2, intervP3, intervP4, timestmpsP1, timestmpsP2, timestmpsP3, timestmpsP4)
-        VALUES ($edad ,'$sexo', $experiencia, '$genero_pref', '$intervP0', '$intervP1', '$intervP2', '$intervP3', '$timstpP0', '$timstpP1', '$timstpP2', '$timstpP3')";
+$sql = "INSERT INTO Datos (edad, sexo, experiencia, genPreferido, dispositivo, intervP1, intervP2, intervP3, intervP4, timestmpsP1, timestmpsP2, timestmpsP3, timestmpsP4)
+        VALUES ($edad ,'$sexo', $experiencia, '$genero_pref', '$disp' , '$intervP0', '$intervP1', '$intervP2', '$intervP3', '$timstpP0', '$timstpP1', '$timstpP2', '$timstpP3')";
 
 if ($conn->query($sql) === TRUE) {
   echo "Se guardaron los resultados exitosamente";

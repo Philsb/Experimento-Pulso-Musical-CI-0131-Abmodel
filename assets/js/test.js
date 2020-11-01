@@ -1,6 +1,5 @@
 // JavaScript source code
 var timestart = 0;
-var timestamps = [];
 var counter = 0
 var countFlag = false;
 var keyUpFlag = true;
@@ -29,9 +28,11 @@ let timer_test = document.getElementById('timer_test');
 let container_spacebar = document.getElementById('cont_spacebar');
 let btn_mobile =  document.getElementById('btn-mobile');
 
+let timestamps = [];
 
 //Resultados de cada prueba
 var resultados = {
+    disp: detectMob(),
     p0: {timestamps: "", intervals:""},
     p1: {timestamps: "", intervals:""},
     p2: {timestamps: "", intervals:""},
@@ -47,7 +48,7 @@ function recordEntry() {
 }
 
 function finishTest(testNumber) {
-    var intervals = [];
+    let intervals = [];
     counter = 0;
     currentTest++;
     for (let index = 1; index < timestamps.length; index++) {
@@ -57,6 +58,21 @@ function finishTest(testNumber) {
     //Guarda los resultados
     resultados['p'+ testNumber].timestamps = timestamps.join(',');
     resultados['p'+ testNumber].intervals = intervals.join(',');
+
+    if(testNumber == 0) 
+    {
+        document.getElementById('presc_p0').innerHTML = 'Prueba 1 ' + precision(intervals) + "%";
+    } else if (testNumber == 1) 
+    {
+        document.getElementById('presc_p1').innerHTML = 'Prueba 2 ' + precision(intervals) + "%";
+    } else if (testNumber == 2) 
+    {
+        document.getElementById('presc_p2').innerHTML = 'Prueba 3 ' + precision(intervals) + "%";
+    } else 
+    {
+       document.getElementById('presc_p3').innerHTML = 'Prueba 4 ' + precision(intervals) + "%"; 
+    }
+    
 
     countFlag = false;
     timestamps = [];
@@ -241,8 +257,29 @@ function mobile_released() {
 }
 
 function detectMob() {
-    return ( ( window.innerWidth <= 768 ) || ( window.innerHeight <= 768 ) );
-  }
+    if(( window.innerWidth <= 768 ) || ( window.innerHeight <= 768 ) )
+    {
+        return 'computadora';
+    } else 
+    {
+        return 'movil';
+
+    } 
+}
+
+function precision(interv) {
+        var acumulador = 0.0;
+        var porcentaje = 0.0;
+        for (var i = 0; i < interv.length; i++) {
+            acumulador += interv[i];
+        }
+
+        acumulador = acumulador % 15000;
+        porcentaje = 100 - ((acumulador / 15000) * 100);
+
+        return porcentaje;
+}
+
 
 //funcion para enviar datos a la base de datos
 function send_data() {
