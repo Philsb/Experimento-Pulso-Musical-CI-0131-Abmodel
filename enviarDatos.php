@@ -23,10 +23,18 @@ if(isset($_POST['resultados'])){
  //some php operation
 }
 
-echo json_encode($obj->p3->timestamps);
-echo $obj->p1->intervals;
+$intervP0 = $obj->p0->intervals;
+$intervP1 = $obj->p1->intervals;
+$intervP2 = $obj->p2->intervals;
+$intervP3 = $obj->p3->intervals;
+$timstpP0 = $obj->p0->timestamps;
+$timstpP1 = $obj->p0->timestamps;
+$timstpP2 = $obj->p0->timestamps;
+$timstpP3 = $obj->p0->timestamps;
 
-/*
+
+
+
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
@@ -35,7 +43,7 @@ if ($conn->connect_error) {
 }
 
 $sql = "INSERT INTO datosTest (edad, sexo, experiencia, genPreferido, intervP1, intervP2, intervP3, intervP4, timestmpsP1, timestmpsP2, timestmpsP3, timestmpsP4)
-        VALUES ($edad ,'$sexo', $experiencia, '$genero_pref', '$obj->p0->intervals', '$obj->p1->intervals', '$obj->p2->intervals', '$obj->p3->intervals', '$obj->p0->timestamps', '$obj->p1->timestamps', '$obj->p2->timestamps', '$obj->p3->timestamps')";
+        VALUES ($edad ,'$sexo', $experiencia, '$genero_pref', '$intervP0', '$intervP1', '$intervP2', '$intervP3', '$timstpP0', '$timstpP1', '$timstpP2', '$timstpP3')";
 
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";
@@ -45,6 +53,6 @@ if ($conn->query($sql) === TRUE) {
 
 $conn->close();
 
-*/
+
 exit;
 ?>

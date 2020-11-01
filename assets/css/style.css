@@ -640,7 +640,7 @@ min-height: 300px;
 }
 
 .instrucciones .boton {
-    background: url("../img/boton.png") center center no-repeat;
+    background: url("../img/boton.PNG") center center no-repeat;
     background-size: contain;
     min-height: 200px;
 }
