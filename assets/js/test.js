@@ -68,21 +68,22 @@ function finishTest(testNumber) {
 
     if(testNumber == 0) 
     {
-        pres0.innerHTML = 'Prueba 1: <strong>' + precision(666,intervals) + '%/<strong>';
+        pres0.innerHTML = 'Prueba 1: <strong>' + Math.round(precision(666,intervals)) + '%</strong>';
     } else if (testNumber == 1) 
     {
-        pres1.innerHTML = 'Prueba 2: <strong>' + precision(1000,intervals) + '%/<strong>';
+        pres1.innerHTML = 'Prueba 2: <strong>' + Math.round(precision(1000,intervals)) + '%</strong>';
     } else if (testNumber == 2) 
     {
-        pres2.innerHTML = 'Prueba 3: <strong>' + precision(500,intervals) + '%/<strong>';
+        pres2.innerHTML = 'Prueba 3: <strong>' + Math.round(precision(500,intervals)) + '%</strong>';
     } else 
     {
-       pres3.innerHTML = 'Prueba 4: <strong>' + precision(400,intervals) + '%/<strong>'; 
+       pres3.innerHTML = 'Prueba 4: <strong>' + Math.round(precision(400,intervals)) + '%</strong>'; 
     }
 
     countFlag = false;
-    timestamps.length = 0;
+    timestamps = [];
 }
+
 
 $(document).keydown(function (event) {
     if (keyUpFlag) {
@@ -274,15 +275,16 @@ function detectMob() {
 }
 
 function precision(tiempo_perfecto, interv) {
-        var acumulador = 0.0;
-        var porcentaje = 0.0;
-        for (var i = 0; i < interv.length; i++) {
-            acumulador += interv[i];
-        }
-        acumulador = (acumulador/interv.length);
-        porcentaje = (acumulador / tiempo_perfecto) * 100;
-        return porcentaje;
+    var acumulador = 0.0;
+    var porcentaje = 0.0;
+    for (var i = 0; i < interv.length; i++) {
+        acumulador += (tiempo_perfecto-(interv[i]%tiempo_perfecto));
+    }
+    acumulador = (acumulador/interv.length);
+    porcentaje = 100 - ((acumulador / tiempo_perfecto) * 100);
+    return porcentaje;
 }
+
 
 
 //funcion para enviar datos a la base de datos

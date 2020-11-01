@@ -29,9 +29,9 @@ $intervP1 = $obj->p1->intervals;
 $intervP2 = $obj->p2->intervals;
 $intervP3 = $obj->p3->intervals;
 $timstpP0 = $obj->p0->timestamps;
-$timstpP1 = $obj->p0->timestamps;
-$timstpP2 = $obj->p0->timestamps;
-$timstpP3 = $obj->p0->timestamps;
+$timstpP1 = $obj->p1->timestamps;
+$timstpP2 = $obj->p2->timestamps;
+$timstpP3 = $obj->p3->timestamps;
 
 
 
