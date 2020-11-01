@@ -11,7 +11,7 @@ $data['edad'] = $_SESSION['edad'] ;
 $data['sexo'] = $_SESSION['sexo'];
 $data['genero_pref'] = $_SESSION['genero_pref'];
  
-echo json_encode($data);
+//echo json_encode($data);
 
 $edad =  $_SESSION['edad'];
 $sexo = $_SESSION['sexo'];
@@ -23,6 +23,10 @@ if(isset($_POST['resultados'])){
  //some php operation
 }
 
+echo json_encode($obj->p3->timestamps);
+echo $obj->p1->intervals;
+
+/*
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
@@ -41,6 +45,6 @@ if ($conn->query($sql) === TRUE) {
 
 $conn->close();
 
-
+*/
 exit;
 ?>
