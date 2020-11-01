@@ -47,7 +47,7 @@ function recordEntry() {
 }
 
 function finishTest(testNumber) {
-    var intervals = []
+    var intervals = [];
     counter = 0;
     currentTest++;
     for (let index = 1; index < timestamps.length; index++) {
@@ -59,7 +59,7 @@ function finishTest(testNumber) {
     resultados['p'+ testNumber].intervals = intervals.join(',');
 
     countFlag = false;
-    timestamps = []
+    timestamps = [];
 }
 
 $(document).keydown(function (event) {
@@ -118,6 +118,8 @@ function comenzar_prueba(sound) {
 
     sleep(3000);
 
+    setTimeout(setFlags, 8000);
+
     if (sound == 0) {
         setTimeout(finishTest, 23000, 0);
         soundArr[1].play();
@@ -132,9 +134,7 @@ function comenzar_prueba(sound) {
         soundArr[3].play();
     }
 
-    setTimeout(setFlags, 8000);
     
-
     start = new Date().getTime();
 
     var x = setInterval(function () {
@@ -239,6 +239,10 @@ function mobile_released() {
         keyUpFlag = true;
     }
 }
+
+function detectMob() {
+    return ( ( window.innerWidth <= 768 ) || ( window.innerHeight <= 768 ) );
+  }
 
 //funcion para enviar datos a la base de datos
 function send_data() {
