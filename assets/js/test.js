@@ -68,20 +68,20 @@ function finishTest(testNumber) {
 
     if(testNumber == 0) 
     {
-        pres0.innerHTML = 'Prueba 1 ' + precision(666,intervals) + "%";
+        pres0.innerHTML = 'Prueba 1: <strong>' + precision(666,intervals) + '%/<strong>';
     } else if (testNumber == 1) 
     {
-        pres1.innerHTML = 'Prueba 2 ' + precision(1000,intervals) + "%";
+        pres1.innerHTML = 'Prueba 2: <strong>' + precision(1000,intervals) + '%/<strong>';
     } else if (testNumber == 2) 
     {
-        pres2.innerHTML = 'Prueba 3 ' + precision(500,intervals) + "%";
+        pres2.innerHTML = 'Prueba 3: <strong>' + precision(500,intervals) + '%/<strong>';
     } else 
     {
-       pres3.innerHTML = 'Prueba 4 ' + precision(400,intervals) + "%"; 
+       pres3.innerHTML = 'Prueba 4: <strong>' + precision(400,intervals) + '%/<strong>'; 
     }
 
     countFlag = false;
-    timestamps = [];
+    timestamps.length = 0;
 }
 
 $(document).keydown(function (event) {
