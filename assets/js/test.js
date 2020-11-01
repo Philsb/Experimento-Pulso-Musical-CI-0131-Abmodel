@@ -62,7 +62,7 @@ function finishTest(testNumber) {
         intervals.push(timestamps[index] - timestamps[index - 1])
     }
 
-    //Guarda los resultados
+    //Guarda los resultados en diccionario
     resultados['p'+ testNumber].timestamps = timestamps.join(',');
     resultados['p'+ testNumber].intervals = intervals.join(',');
 
