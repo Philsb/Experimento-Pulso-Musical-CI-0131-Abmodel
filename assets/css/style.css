@@ -764,6 +764,10 @@ overflow: hidden;
     .mobile-button {
         display: block;
     }
+
+    .btn-get-started {
+      font-size: 15px;
+    }
 }
 
 @media screen and (max-height: 768px) {
