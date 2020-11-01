@@ -32,10 +32,10 @@ let btn_mobile =  document.getElementById('btn-mobile');
 
 //Resultados de cada prueba
 var resultados = {
-    p0: {timestamps: [], intervals:[]},
-    p1: {timestamps: [], intervals:[]},
-    p2: {timestamps: [], intervals:[]},
-    p3: {timestamps: [], intervals:[]}
+    p0: {timestamps: "", intervals:""},
+    p1: {timestamps: "", intervals:""},
+    p2: {timestamps: "", intervals:""},
+    p3: {timestamps: "", intervals:""}
 };
 
 
@@ -55,8 +55,8 @@ function finishTest(testNumber) {
     }
 
     //Guarda los resultados
-    resultados['p'+ testNumber].timestamps = timestamps;
-    resultados['p'+ testNumber].intervals = intervals;
+    resultados['p'+ testNumber].timestamps = timestamps.join(',');
+    resultados['p'+ testNumber].intervals = intervals.join(',');
 
     countFlag = false;
     timestamps = []

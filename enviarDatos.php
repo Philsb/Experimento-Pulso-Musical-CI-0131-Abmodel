@@ -31,7 +31,7 @@ if ($conn->connect_error) {
 }
 
 $sql = "INSERT INTO datosTest (edad, sexo, experiencia, genPreferido, intervP1, intervP2, intervP3, intervP4, timestmpsP1, timestmpsP2, timestmpsP3, timestmpsP4)
-        VALUES ($edad ,'$sexo', $experiencia, '$genero_pref', '$obj['p0'].intervals', '$obj['p1'].intervals', '$obj['p2'].intervals', '$obj['p3'].intervals', '$obj['p0'].timestamps', '$obj['p1'].timestamps', '$obj['p2'].timestamps', '$obj['p3'].timestamps')";
+        VALUES ($edad ,'$sexo', $experiencia, '$genero_pref', '$obj->p0->intervals', '$obj->p1->intervals', '$obj->p2->intervals', '$obj->p3->intervals', '$obj->p0->timestamps', '$obj->p1->timestamps', '$obj->p2->timestamps', '$obj->p3->timestamps')";
 
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";
