@@ -46,7 +46,7 @@ $sql = "INSERT INTO Datos (edad, sexo, experiencia, genPreferido, intervP1, inte
         VALUES ($edad ,'$sexo', $experiencia, '$genero_pref', '$intervP0', '$intervP1', '$intervP2', '$intervP3', '$timstpP0', '$timstpP1', '$timstpP2', '$timstpP3')";
 
 if ($conn->query($sql) === TRUE) {
-  echo "New record created successfully";
+  echo "Se guardaron los resultados exitosamente";
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
