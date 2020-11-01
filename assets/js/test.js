@@ -30,9 +30,11 @@ let btn_mobile =  document.getElementById('btn-mobile');
 
 let timestamps = [];
 
+let dispositivo = detectMob();
+
 //Resultados de cada prueba
 var resultados = {
-    disp: detectMob(),
+    disp: dispositivo,
     p0: {timestamps: "", intervals:""},
     p1: {timestamps: "", intervals:""},
     p2: {timestamps: "", intervals:""},
@@ -46,6 +48,11 @@ function recordEntry() {
         timestamps.push(Date.now() - timestart);
     }
 }
+
+let pres0 = document.getElementById('presc_p0');
+let pres1 = document.getElementById('presc_p1');
+let pres2 = document.getElementById('presc_p2');
+let pres3 = document.getElementById('presc_p3');
 
 function finishTest(testNumber) {
     let intervals = [];
@@ -61,18 +68,17 @@ function finishTest(testNumber) {
 
     if(testNumber == 0) 
     {
-        document.getElementById('presc_p0').innerHTML = 'Prueba 1 ' + precision(intervals) + "%";
+        pres0.innerHTML = 'Prueba 1 ' + precision(666,intervals) + "%";
     } else if (testNumber == 1) 
     {
-        document.getElementById('presc_p1').innerHTML = 'Prueba 2 ' + precision(intervals) + "%";
+        pres1.innerHTML = 'Prueba 2 ' + precision(1000,intervals) + "%";
     } else if (testNumber == 2) 
     {
-        document.getElementById('presc_p2').innerHTML = 'Prueba 3 ' + precision(intervals) + "%";
+        pres2.innerHTML = 'Prueba 3 ' + precision(500,intervals) + "%";
     } else 
     {
-       document.getElementById('presc_p3').innerHTML = 'Prueba 4 ' + precision(intervals) + "%"; 
+       pres3.innerHTML = 'Prueba 4 ' + precision(400,intervals) + "%"; 
     }
-    
 
     countFlag = false;
     timestamps = [];
@@ -259,24 +265,22 @@ function mobile_released() {
 function detectMob() {
     if(( window.innerWidth <= 768 ) || ( window.innerHeight <= 768 ) )
     {
-        return 'computadora';
+        return 'movil';
     } else 
     {
-        return 'movil';
+        return 'computadora';
 
     } 
 }
 
-function precision(interv) {
+function precision(tiempo_perfecto, interv) {
         var acumulador = 0.0;
         var porcentaje = 0.0;
         for (var i = 0; i < interv.length; i++) {
             acumulador += interv[i];
         }
-
-        acumulador = acumulador % 15000;
-        porcentaje = 100 - ((acumulador / 15000) * 100);
-
+        acumulador = (acumulador/interv.length);
+        porcentaje = (acumulador / tiempo_perfecto) * 100;
         return porcentaje;
 }
 
