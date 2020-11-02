@@ -3,7 +3,7 @@ var timestart = 0;
 var counter = 0
 var countFlag = false;
 var keyUpFlag = true;
-var testTime = 15000;
+var testTime = 30000;
 var currentTest = 0;
 let barra = document.getElementById('barra');
 let tab_p1 = document.getElementById('p1-tab');
@@ -136,7 +136,7 @@ $(document).ready(function () {
 
 function comenzar_prueba(sound) {
 
-    timer_test.innerHTML = '23 segundos';
+    timer_test.innerHTML = '38 segundos';
     tab_spacebar.className = 'tab-pane fade show active';
 
     sleep(3000);
@@ -144,16 +144,16 @@ function comenzar_prueba(sound) {
     setTimeout(setFlags, 8000);
 
     if (sound == 0) {
-        setTimeout(finishTest, 23000, 0);
+        setTimeout(finishTest, 38000, 0);
         soundArr[1].play();
     } else if (sound == 1) {
-        setTimeout(finishTest, 23000, 1);
+        setTimeout(finishTest, 38000, 1);
         soundArr[0].play();
     } else if (sound == 2) {
-        setTimeout(finishTest, 23000, 2);
+        setTimeout(finishTest, 38000, 2);
         soundArr[2].play();
     } else {
-        setTimeout(finishTest, 23000, 3);
+        setTimeout(finishTest, 38000, 3);
         soundArr[3].play();
     }
 
@@ -165,13 +165,16 @@ function comenzar_prueba(sound) {
         // Find the distance between now and the count down date
         var distance = new Date().getTime() - start;
 
-        var seconds = 23 - Math.floor((distance % (1000 * 60)) / 1000);
+        var seconds = 38 - Math.floor((distance % (1000 * 60)) / 1000);
 
         // Display the result in the element with id="demo"
-        timer_test.innerHTML = seconds + " segundos";
+        if(seconds%5 == 0)
+        {
+            timer_test.innerHTML = seconds + " segundos";
+        }
 
         // If the count down is finished, write some text
-        if (distance > 23000) {
+        if (distance > 38000) {
             clearInterval(x);
             timer_test.innerHTML = "Prueba terminada";
             if (sound == 0) {
