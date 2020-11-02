@@ -769,14 +769,3 @@ overflow: hidden;
       font-size: 15px;
     }
 }
-
-@media screen and (max-height: 768px) {
-
-    .desktop-spacebar {
-        display: none;
-    }
-
-    .mobile-button {
-        display: block;
-    }
-}

@@ -267,7 +267,7 @@ function mobile_released() {
 }
 
 function detectMob() {
-    if(( window.innerWidth <= 768 ) || ( window.innerHeight <= 768 ) )
+    if( window.innerWidth <= 768 )
     {
         return 'movil';
     } else 
@@ -283,12 +283,20 @@ function precision(tiempo_perfecto, interv) {
     for (var i = 0; i < interv.length; i++) {
         acumulador += Math.abs(interv[i] - tiempo_perfecto);   
     }
-    acumulador = (acumulador/interv.length);
-    porcentaje = 100 - ((acumulador / tiempo_perfecto) * 100);
-    if(porcentaje < 0)
+
+    if (interv.length == 0)
     {
         porcentaje = 0;
+    } else {
+        acumulador = (acumulador/interv.length);
+        porcentaje = 100 - ((acumulador / tiempo_perfecto) * 100);
+
+        if(porcentaje < 0)
+        {
+            porcentaje = 0;
+        }
     }
+
     return porcentaje;
 }
 
