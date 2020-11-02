@@ -68,16 +68,16 @@ function finishTest(testNumber) {
 
     if(testNumber == 0) 
     {
-        pres0.innerHTML = 'Prueba 1: <strong>' + Math.round(precision(666,intervals)) + '%</strong>';
+        pres0.innerHTML = 'Prueba 1 (90 BPM): <strong>' + Math.round(precision(666,intervals)) + '%</strong>';
     } else if (testNumber == 1) 
     {
-        pres1.innerHTML = 'Prueba 2: <strong>' + Math.round(precision(1000,intervals)) + '%</strong>';
+        pres1.innerHTML = 'Prueba 2 (150 BPM): <strong>' + Math.round(precision(400,intervals)) + '%</strong>';
     } else if (testNumber == 2) 
     {
-        pres2.innerHTML = 'Prueba 3: <strong>' + Math.round(precision(500,intervals)) + '%</strong>';
+        pres2.innerHTML = 'Prueba 3 (60 BPM): <strong>' + Math.round(precision(1000,intervals)) + '%</strong>';
     } else 
     {
-       pres3.innerHTML = 'Prueba 4: <strong>' + Math.round(precision(400,intervals)) + '%</strong>'; 
+       pres3.innerHTML = 'Prueba 4 (120 BPM): <strong>' + Math.round(precision(500,intervals)) + '%</strong>'; 
     }
 
     countFlag = false;
@@ -148,13 +148,13 @@ function comenzar_prueba(sound) {
         soundArr[1].play();
     } else if (sound == 1) {
         setTimeout(finishTest, 38000, 1);
-        soundArr[0].play();
+        soundArr[3].play();        
     } else if (sound == 2) {
         setTimeout(finishTest, 38000, 2);
-        soundArr[2].play();
+        soundArr[0].play();
     } else {
         setTimeout(finishTest, 38000, 3);
-        soundArr[3].play();
+        soundArr[2].play();
     }
 
     
